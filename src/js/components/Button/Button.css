@@ -1,0 +1,27 @@
+button {
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button-for-search {
+  width: 130px;
+  height: 40px;
+  border: solid 2px #979AAA;
+  background: linear-gradient(#D5DEF0, #8A8ABD);
+  color: #755D9A;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.button-for-search:hover {
+  background: linear-gradient(#8A8ABD, #D5DEF0);
+  border: solid 2px #755D9A;
+  box-shadow: inset 0 0 0 1px #818181; 
+}
+
+.button-for-search:active {
+  background: #543964;
+  border: solid 1px #2f2f2f;
+  box-shadow: inset 0 10px 15px 0 #543964; 
+}   

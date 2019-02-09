@@ -1,0 +1,33 @@
+.info-pannel {
+  max-width: 650px;
+  margin-top: 25px;
+  padding-top: 3px;
+  border: 1px solid rgb(187, 187, 187);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  user-select: none;
+}
+
+.status-list {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.status-list li {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.status-list div {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-right: 5px;
+}

@@ -1,0 +1,19 @@
+.students-name {
+  background-color: rgb(155, 147, 170);
+}
+
+.students-name th {
+  padding: 10px 7px;
+  border: 1px solid black;
+}
+
+.students-name th a {
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.students-name th a:hover {
+  color: white;
+}
