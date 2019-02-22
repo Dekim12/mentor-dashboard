@@ -1,4 +1,4 @@
-.info-pannel {
+.info-panel {
   max-width: 650px;
   margin-top: 25px;
   padding-top: 3px;
@@ -14,12 +14,12 @@
   margin: 5px 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .status-list li {
-  margin: 0 15px;
+  margin: 2px 15px;
   display: flex;
   align-items: center;
   font-size: 18px;

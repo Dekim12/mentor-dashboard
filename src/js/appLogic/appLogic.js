@@ -1,10 +1,4 @@
-const STATUSES = {
-    checked: 'checked',
-    checking: 'checking',
-    'in progress': 'in-progress',
-    todo: 'to-do',
-    'not done': 'not-done'
-};
+import { STATUSES } from './constants';
 
 let key = 0;
 export const keyGen = () => {
@@ -14,7 +8,7 @@ export const keyGen = () => {
 
 export const fetchData = async addData => {
     const response = await fetch(
-        'https://mentor-dashboard-server.herokuapp.com'
+        'https://mentor-dashboard-server.herokuapp.com/data'
     );
     const data = await response.json();
     addData(data);

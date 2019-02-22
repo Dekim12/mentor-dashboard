@@ -3,7 +3,7 @@ import React from 'react';
 import './InfoPanel.css';
 
 const InfoPanel = () => (
-    <article className="info-pannel">
+    <article className="info-panel">
         <h2>Tasks status</h2>
         <ul className="status-list">
             <li>

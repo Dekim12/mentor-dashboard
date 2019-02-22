@@ -1,7 +1,28 @@
+@media (max-width: 480px) {
+  div.mentor-search {
+    height: 120px;
+    margin: 10px 0 25px;
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.mentor-search form {
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
+
+  div.mentor-search button {
+    margin: 0 30px;
+  }
+}
+
 .mentor-search {
-  width: 700px;
-  height: 100px;
-  padding: 25px;
+  max-width: 550px;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
   margin: 30px 0;
   display: flex;
   justify-content: space-between;
@@ -11,15 +32,16 @@
   user-select: none;
 }
 
-.mentor-search label {
-  font-size: 22px;
+.mentor-search form {
+  width: 65%;
+  min-width: 270px;
+  margin-right: 15px;
 }
 
 .mentor-search input {
-  width: 330px;
+  width: 100%;
   height: 40px;
-  margin-left: 5px;
   padding: 0 5px;
-  font-size: 20px;
+  font-size: 19px;
   outline: none;
 }

@@ -1,6 +1,7 @@
 const initialState = {
     isLoading: true,
-    mentorName: undefined
+    mentorName: undefined,
+    gitName: undefined
 };
 
 export const reducer = (state = initialState, action) => {
@@ -15,6 +16,8 @@ export const reducer = (state = initialState, action) => {
                 data: action.payload,
                 isLoading: !state.isLoading
             };
+        case 'SET_GIT_NAME':
+            return { ...state, gitName: action.payload };
         default:
             return state;
     }

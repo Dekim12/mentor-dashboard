@@ -23,18 +23,19 @@ a {
 .app {
   width: 100%;
   min-height: 100vh;
-  padding: 0 50px 10px 50px;
+  padding: 0 10px 10px 10px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #F0F0FC;
-  font-family: Chunkfive;  
+  font-family: Chunkfive;
+  text-align: center;
 }
 
 h1 {
-  margin-top: 10px;
-  font-size: 45px;
+  margin: 10px 45px 0px;
+  font-size: 42px;
   font-weight: bold;
   letter-spacing: 1px;
   color: rgb(92, 74, 119);
@@ -47,3 +48,17 @@ h2 {
   letter-spacing: 1px;
   color: rgb(84, 61, 119);
 } 
+
+.authorization {  
+  border: none;
+  background-color: #F0F0FC;
+  color:black;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  transition: color 0.2s;
+}
+
+.authorization:hover {
+  color:rgb(116, 14, 14);
+}

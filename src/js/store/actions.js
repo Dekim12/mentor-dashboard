@@ -12,3 +12,8 @@ export const setData = data => ({
     type: 'SET_DATA',
     payload: data
 });
+
+export const setGitName = name => ({
+    type: 'SET_GIT_NAME',
+    payload: name
+});

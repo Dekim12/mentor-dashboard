@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { setMentorName } from '../../store/actions';
+import { setMentorName, setGitName } from '../../store/actions';
 import { Button } from '../../components';
 
 import './MentorSearch.css';
@@ -15,12 +15,23 @@ class MentorSearch extends Component {
     }
 
     addSearchQuery = event => {
-        this.searchQuery = event.target.value;
+        let currentValue = event.target.value;
+        this.searchQuery = currentValue.replace(/^\s+|\s+$/g, '');
     };
 
     findCertainData = event => {
         event.preventDefault();
         this.props.setMentorName(this.searchQuery);
+    };
+
+    shouldComponentUpdate = nextProps => {
+        if (nextProps.gitName) {
+            const searchShape = this.inputElem.current;
+            searchShape.value = nextProps.gitName;
+            this.props.setGitName(undefined);
+            this.searchQuery = nextProps.gitName;
+        }
+        return false;
     };
 
     componentDidMount = () => {
@@ -36,17 +47,14 @@ class MentorSearch extends Component {
         return (
             <div className="mentor-search" onSubmit={this.findCertainData}>
                 <form>
-                    <label>
-                        GitHub name:
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            autoFocus
-                            maxLength="50"
-                            onChange={this.addSearchQuery}
-                            ref={this.inputElem}
-                        />
-                    </label>
+                    <input
+                        type="text"
+                        placeholder="Mentor's GitHub name"
+                        autoFocus
+                        maxLength="50"
+                        onChange={this.addSearchQuery}
+                        ref={this.inputElem}
+                    />
                 </form>
                 <Button
                     content="Search"
@@ -58,15 +66,20 @@ class MentorSearch extends Component {
     }
 }
 
+const mapStateToProps = state => ({
+    gitName: state.gitName
+});
+
 const mapDispatchToProps = dispatch =>
     bindActionCreators(
         {
-            setMentorName
+            setMentorName,
+            setGitName
         },
         dispatch
     );
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(MentorSearch);
